@@ -1,0 +1,42 @@
+.box {
+  background: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.square {
+  background: blue;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.tip-wrapper {
+  position: relative;
+  top: 100px;
+  display: inline-block;
+}
+
+.tip {
+    background: yellow;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.tip-text {
+  content: attr(data-text);
+  visibility: hidden;
+  position: absolute;
+  bottom: 40px;
+  left: -80px;
+  min-width: 200px;
+  max-width: 200px;
+  background: red;
+}
+
+.tip-text[aria-visible="true"] {
+  visibility: visible;
+}
