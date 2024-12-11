@@ -9,21 +9,6 @@ interface StoreValues {
 
 const defaultValues: StoreValues = { a: 3, b: 1 }
 
-const storeB = createStore(defaultValues)
-const storeC = createStore(null as unknown as StoreValues, null, (set) => ({
-  incA: () => set((prev) => ({ ...prev, a: prev.a + 1 })),
-  incB: () => set((prev) => ({ ...prev, b: prev.b + 1 })),
-  incTimeout: (incBy: number) =>
-    set((prev) => {
-      return new Promise((resolve, reject) => {
-        if (incBy < 10) {
-          reject('fail')
-        }
-        return setTimeout(() => resolve({ ...prev, a: prev.a + incBy }), 1000)
-      })
-    })
-}))
-
 const store = createStore(
   defaultValues,
   {

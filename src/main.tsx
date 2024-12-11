@@ -2,13 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
-
-import './lib/sentryInstance'
-
-import { Example } from './lib/react/doomed-store/Example.tsx'
+import { NewReact } from './lib/react/NewReact'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Example />
+    <NewReact />
   </React.StrictMode>
 )
